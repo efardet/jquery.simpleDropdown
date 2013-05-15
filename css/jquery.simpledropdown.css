@@ -1,0 +1,73 @@
+/*
+Name: jQuery Simple Drop Down Plugin Optimized Stylesheet
+Author: Etienne Fardet
+Version: 1.4
+*/
+
+@charset "utf-8";
+
+/* General styles for demo */
+body {font-family:Verdana, Geneva, sans-serif; font-size:14px;width:60%;margin:0 auto;}
+a {text-decoration:none;color:#039;}
+h3 {clear:both;color: #039;}
+pre {border:1px solid black; padding:8px;width:auto; height:250px; margin:20px;overflow:auto;}
+strong {color: #093;}
+.requirements {list-style:square;}
+.author {color: #003;font-size: 12px;font-weight: bold;font-style: italic;}
+
+/***** Rounded corners *****/
+/* 
+Engines exist for making corners round, however, this approach fits all browsers, including IE6
+You can make your own and customize the provided images. 
+Currently, CSS and images are made to get along together (6x6px corners), 
+this section must be carefully changed
+*/
+.TopLeft, .TopRight, .BottomLeft, .BottomRight {width:6px;height:6px;position:absolute;}
+.TopLeft {background:url(../img/top-left.png) no-repeat;}
+.TopRight {background:url(../img/top-right.png) no-repeat;}
+.BottomLeft {background:url(../img/bottom-left.png) no-repeat;}
+.BottomRight {background:url(../img/bottom-right.png) no-repeat;}
+.TopMiddle, .BottomMiddle {width:154px;height:6px;background:url(../img/middle-horizontal.png) repeat-x;position:absolute;left:6px;}
+.VerticalLeft, .VerticalRight {width:6px;height:27px;display:block;background:url(../img/middle-vertical.png) repeat-y;position:absolute;top:6px;}
+.TopRight, .VerticalRight, .BottomRight {left:160px;}
+.Middle {background:#000;position:absolute;left:6px;top:6px;width:154px;height:27px;}
+.BottomLeftSelected {background:url(../img/bottom-left-selected.png) no-repeat;}
+.BottomMiddleSelected  {background:url(../img/middle-horizontal-selected.png) repeat-x;}
+.BottomRightSelected {background:url(../img/bottom-right-selected.png) no-repeat;}
+
+/* Drop 1 */
+#dropdown1 a, #dropdown2 a, #dropdown3 a {font-family:Arial;font-size:80%;font-weight:bold;}
+.mycorners1 {margin-bottom:-1px;}
+.mycorners2, .mycorners3 {margin-top:-1px;}
+
+#dropdown1 {position:relative;background:transparent;width:166px;margin:0 0 20px 0;padding:0 0 0 0;height:auto;bottom:0;right:0;z-index:2;float:left;clear:both;overflow:visible;}
+#dropdown1 .dropdown {position:relative;list-style-type:none;display:block;margin:0;padding:0;background:transparent;color:#fff;cursor:pointer;}
+#dropdown1 .drop ul {width:auto;height:auto;list-style-type:none;margin:0;padding:0;background:#fff;}
+#dropdown1 .drop ul li {display:block;padding:0;margin:0;background-color: #000;border-left:none;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border:none;;}
+#dropdown1 .drop ul li a:hover {background:#EA7D00;color:#fff;}
+#dropdown1 .drop {width:100%;border:none;position: absolute;height:0;overflow:hidden;margin-top: 0;margin-bottom: 0;}
+#dropdown1 .selected {width:auto;padding:0;}
+#dropdown1 .selected a{padding:10px 8px;display:block;color:#fff;}
+#dropdown1 .dropdown ul li a {width:auto;text-decoration:none;color:#fff;display:block;margin:0;padding:10px 8px;}
+
+/* Drop 2 */
+#dropdown2 {position:relative;background:transparent;width:166px;margin:0 10px 20px 0;padding:0 0 0 0;height:auto;bottom:0;right:0;z-index:1;float:left;clear:both;overflow:visible;}
+#dropdown2 .dropdown {position:relative;list-style-type:none;display:block;margin:0;padding:0;background:transparent;color:#fff;cursor:pointer;}
+#dropdown2 .drop ul {width:auto;height:auto;list-style-type:none;margin:0;padding:0;background:#fff;}
+#dropdown2 .drop ul li {display:block;padding:0;margin:0;background-color: #000;border-left:none;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border:none;;}
+#dropdown2 .drop ul li a:hover {background:#EA7D00;color:#fff;}
+#dropdown2 .drop {width:100%;border:none;position: absolute;height:0;overflow:hidden;margin-top: 0;margin-bottom: 0;}
+#dropdown2 .selected {width:auto;padding:0;}
+#dropdown2 .selected a{padding:10px 8px;display:block;color:#fff;}
+#dropdown2 .dropdown ul li a {width:auto;text-decoration:none;color:#fff;display:block;margin:0;padding:10px 8px;}
+
+/* Drop 2 */
+#dropdown3 {float:left;position:relative;background:transparent;width:166px;margin:0 0 20px 0;padding:0 0 0 0;height:auto;bottom:0;right:0;z-index:0;float:left;overflow:visible;}
+#dropdown3 .dropdown {position:relative;list-style-type:none;display:block;margin:0;padding:0;background:transparent;color:#fff;cursor:pointer;}
+#dropdown3 .drop ul {width:auto;height:auto;list-style-type:none;margin:0;padding:0;background:#fff;}
+#dropdown3 .drop ul li {display:block;padding:0;margin:0;background-color: #000;border-left:none;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border:none;;}
+#dropdown3 .drop ul li a:hover {background:#EA7D00;color:#fff;}
+#dropdown3 .drop {width:100%;border:none;position: absolute;height:0;overflow:hidden;margin-top: 0;margin-bottom: 0;}
+#dropdown3 .selected {width:auto;padding:0;}
+#dropdown3 .selected a{padding:10px 8px;display:block;color:#fff;}
+#dropdown3 .dropdown ul li a {width:auto;text-decoration:none;color:#fff;display:block;margin:0;padding:10px 8px;}

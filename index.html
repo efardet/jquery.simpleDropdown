@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Simple Dropdown List Plugin - Examples</title>
+<meta http-equiv="content-type" content="text/html; charset=utf8"/>
+<meta name="keywords" xml:lang="en" content="jquery, drop, down, dropdown, dropdown, list, combobox, dropdownlist"/>
+<meta name="description" content="A jQuery dropdown list replacement plugin for default browser comboxboxes and dropdown lists" />
+<link href="css/jquery.simpledropdown.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.simpledropdown.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#dropdown1, #dropdown2, #dropdown3").simpledropdown({speed:300});
+});
+</script>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+</head>
+<body>
+<h1 align="center">Simple Dropdown List plugin</h1>
+<fb:like href="http://www.quai-aux-vivres.com/jquery/plugins/simpledropdown/dropdown.html" layout="button_count" show_faces="false" width="200" action="recommend" font="lucida grande"></fb:like>
+<h3>Single dropdown list</h3>
+<div id="dropdown1">
+	<ul>
+		<li><a href="#">Select a country</a></li>
+		<li>
+			<ul>
+				<li><a href="#">Argentina</a></li>
+				<li><a href="#">Brazil</a></li>
+				<li><a href="#">Uruguay</a></li>
+				<li><a href="#">France</a></li>
+				<li><a href="#">United Kingdom</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<h3>Coupled dropdown lists</h3>
+<div id="dropdown2">
+	<ul>
+		<li><a href="#">Select a country</a></li>
+		<li>
+			<ul>
+				<li><a href="#">Argentina</a></li>
+				<li><a href="#">Brazil</a></li>
+				<li><a href="#">Uruguay</a></li>
+				<li><a href="#">France</a></li>
+				<li><a href="#">United Kingdom</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div id="dropdown3">
+	<ul>
+		<li><a href="#">Select a country</a></li>
+		<li>
+			<ul>
+				<li><a href="#">Argentina</a></li>
+				<li><a href="#">Brazil</a></li>
+				<li><a href="#">Uruguay</a></li>
+				<li><a href="#">France</a></li>
+				<li><a href="#">United Kingdom</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<h3>Requirements - &lt;head&gt;</h3>
+<p>To call the plugin:</p>
+<ul class="requirements">
+<li>Download latest <strong>jQuery</strong> version available <a href="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" target="_blank">here</a> and call it in the head section of your html.</li>
+<li>Add a <strong>link</strong> tag pointing to the plugin stylesheet</li>
+<li>Download the <strong>plugin code</strong> <a href="http://www.quai-aux-vivres.com/jquery/plugins/simpledropdown/jquery.simpledropdown.v1.4.zip">right here</a> and call it in the head of your html</li>
+<li>Initialize jQuery using <strong>$(document).ready()</strong> function</li>
+<li>Call the plugin using plugin call and specify ID or class of your div: <strong>$(&quot;#acontainer&quot;).simpledropdown();</strong></li>
+<li>There is currently one option that can be set, speed of dropdown slide, with paramter &quot;speed&quot; (see example below).</li>
+<li>You can specify several div's in case you want to have several drop down lists on the same page - Your final <strong>&lt;head&gt;</strong> tag should look like this:</li>
+</ul>
+<pre>
+&lt;link href=&quot;css/jquery.dropdown.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;/&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.simpledropdown.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function() {
+<strong>$(&quot;#acontainer&quot;).simpledropdown({speed : 300});</strong>
+});
+&lt;/script&gt;
+</pre>
+<h3>Requirements - The HTML</h3>
+<p>The HTML to be used:</p>
+<pre>
+&lt;div id=&quot;<strong>dropdown1</strong>&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;Select a country&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Argentina&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Brazil&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Uruguay&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;France&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;United Kingdom&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<h3>Requirements - The  CSS</h3>
+<p>The CSS  to be used is described below (available in jquery.dropdown.css as well :</p>
+<pre>
+<strong>/*
+Name: jQuery Simple Drop Down Plugin Optimized Stylesheet
+Author: Etienne Fardet
+Version: 1.4
+*/</strong>
+
+@charset "utf-8";
+<strong>
+/* General styles for demo */</strong>
+body {font-family:Verdana, Geneva, sans-serif; font-size:14px;width:60%;margin:0 auto;}
+a {text-decoration:none;color:#039;}
+h3 {clear:both;color: #039;}
+pre {border:1px solid black; padding:8px;width:auto; height:250px; margin:20px;overflow:auto;}
+strong {color: #093;}
+.requirements {list-style:square;}
+.author {color: #003;font-size: 12px;font-weight: bold;font-style: italic;}
+
+<strong>/***** Rounded corners *****/
+/* 
+Engines exist for making corners round, however, this approach fits all browsers, including IE6
+You can make your own and customize the provided images. 
+Currently, CSS and images are made to get along together (6x6px corners), 
+this section must be carefully changed
+*/</strong>
+.TopLeft, .TopRight, .BottomLeft, .BottomRight {width:6px;height:6px;position:absolute;}
+.TopLeft {background:url(../img/top-left.png) no-repeat;}
+.TopRight {background:url(../img/top-right.png) no-repeat;}
+.BottomLeft {background:url(../img/bottom-left.png) no-repeat;}
+.BottomRight {background:url(../img/bottom-right.png) no-repeat;}
+.TopMiddle, .BottomMiddle {width:154px;height:6px;background:url(../img/middle-horizontal.png) repeat-x;position:absolute;left:6px;}
+.VerticalLeft, .VerticalRight {width:6px;height:27px;display:block;background:url(../img/middle-vertical.png) repeat-y;position:absolute;top:6px;}
+.TopRight, .VerticalRight, .BottomRight {left:160px;}
+.Middle {background:#000;position:absolute;left:6px;top:6px;width:154px;height:27px;}
+.BottomLeftSelected {background:url(../img/bottom-left-selected.png) no-repeat;}
+.BottomMiddleSelected  {background:url(../img/middle-horizontal-selected.png) repeat-x;}
+.BottomRightSelected {background:url(../img/bottom-right-selected.png) no-repeat;}
+
+<strong>/* Drop 1 */</strong>
+#dropdown1 a, #dropdown2 a, #dropdown3 a {font-family:Arial;font-size:80%;font-weight:bold;}
+.mycorners1 {margin-bottom:-1px;}
+.mycorners2, .mycorners3 {margin-top:-1px;}
+
+#dropdown1 {position:relative;background:transparent;width:166px;margin:0 0 20px 0;padding:0 0 0 0;height:auto;bottom:0;right:0;z-index:2;float:left;clear:both;overflow:visible;}
+#dropdown1 .dropdown {position:relative;list-style-type:none;display:block;margin:0;padding:0;background:transparent;color:#fff;cursor:pointer;}
+#dropdown1 .drop ul {width:auto;height:auto;list-style-type:none;margin:0;padding:0;background:#fff;}
+#dropdown1 .drop ul li {display:block;padding:0;margin:0;background-color: #000;border-left:none;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border:none;;}
+#dropdown1 .drop ul li a:hover {background:#EA7D00;color:#fff;}
+#dropdown1 .drop {width:100%;border:none;position: absolute;height:0;overflow:hidden;margin-top: 0;margin-bottom: 0;}
+#dropdown1 .selected {width:auto;padding:0;}
+#dropdown1 .selected a{padding:10px 8px;display:block;color:#fff;}
+#dropdown1 .dropdown ul li a {width:auto;text-decoration:none;color:#fff;display:block;margin:0;padding:10px 8px;}
+
+<strong>/* Drop 2 */</strong>
+#dropdown2 {position:relative;background:transparent;width:166px;margin:0 10px 20px 0;padding:0 0 0 0;height:auto;bottom:0;right:0;z-index:1;float:left;clear:both;overflow:visible;}
+#dropdown2 .dropdown {position:relative;list-style-type:none;display:block;margin:0;padding:0;background:transparent;color:#fff;cursor:pointer;}
+#dropdown2 .drop ul {width:auto;height:auto;list-style-type:none;margin:0;padding:0;background:#fff;}
+#dropdown2 .drop ul li {display:block;padding:0;margin:0;background-color: #000;border-left:none;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border:none;;}
+#dropdown2 .drop ul li a:hover {background:#EA7D00;color:#fff;}
+#dropdown2 .drop {width:100%;border:none;position: absolute;height:0;overflow:hidden;margin-top: 0;margin-bottom: 0;}
+#dropdown2 .selected {width:auto;padding:0;}
+#dropdown2 .selected a{padding:10px 8px;display:block;color:#fff;}
+#dropdown2 .dropdown ul li a {width:auto;text-decoration:none;color:#fff;display:block;margin:0;padding:10px 8px;}
+
+<strong>/* Drop 2 */</strong>
+#dropdown3 {float:left;position:relative;background:transparent;width:166px;margin:0 0 20px 0;padding:0 0 0 0;height:auto;bottom:0;right:0;z-index:0;float:left;overflow:visible;}
+#dropdown3 .dropdown {position:relative;list-style-type:none;display:block;margin:0;padding:0;background:transparent;color:#fff;cursor:pointer;}
+#dropdown3 .drop ul {width:auto;height:auto;list-style-type:none;margin:0;padding:0;background:#fff;}
+#dropdown3 .drop ul li {display:block;padding:0;margin:0;background-color: #000;border-left:none;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border:none;;}
+#dropdown3 .drop ul li a:hover {background:#EA7D00;color:#fff;}
+#dropdown3 .drop {width:100%;border:none;position: absolute;height:0;overflow:hidden;margin-top: 0;margin-bottom: 0;}
+#dropdown3 .selected {width:auto;padding:0;}
+#dropdown3 .selected a{padding:10px 8px;display:block;color:#fff;}
+#dropdown3 .dropdown ul li a {width:auto;text-decoration:none;color:#fff;display:block;margin:0;padding:10px 8px;}</pre>
+<p>Make sure you remove the first section of CSS, as it applies to common tags such as 'body', etc, so no overrides are applied to your own stylesheets.</p>
+<p>This consists of a simple list that is transformed using jQuery. The <strong>list</strong> has to be placed <strong>inside a div</strong> with a custom <strong>ID</strong> or <strong>class</strong>, e.g. 'dropdown1' in the above example, and is then called with the plugin using css ID or class.</p>
+<p>- The single lists can now be placed in any div container. Positioning is set to relative for the div's, and absolute for the dropdown. This way you can place the lists anywhere in your html.</p>
+<p>- To have several lists together horizontally on a same line, you just need to make your divs float. </p>
+<p>- If you have lists on top of other lists, you'll have to make sure the z-index property is correctly set, so your lists do not inconsistently display on click.</p>
+<p>The plugin has been tested with latest version Mozilla Firefox, Google Chrome, Safari, Opera, IE (up to 10). After a few fixes, the plugin is now working identically on ALL browsers, IE6 included, WITH rounded corners (using images).</p>
+<p>I have completely reworked this 2013 edition to make a cleaner and responsive plugin. It is working like a charm on iDevices (iPad, iPhone, Samsung tablets), especially if you change your root div width to percentages ;-)</p>
+<p>&nbsp;</p>
+<p><strong>Works perfectly on:</strong><br />
+- IE6, IE7, IE8, IE9, IE10<br />
+- Firefox<br />
+- Google Chrome<br />
+- Safari<br />
+- Opera</p>
+<p>&nbsp;</p>
+<p>Enjoy :-)</p>
+<p class="author">Etienne Fardet</p>
+<p class="author">&nbsp;</p>
+<h3>Changelog:</h3>
+<p><strong>v1.4 - May 14th 2013</strong></p>
+<p>- Plugin reworked - Now more jQuery compliant javascript, possibility to extend options<br />
+  - Reworked effect to make it more fluid, applied on global container and not by individual containers (li's).<br />
+  - Works on mobile devices and tablets<br />
+</p>
+<p><strong>v1.3 - March 25th 2011</strong></p>
+<p>- Plugin reworked - now works identically on every browser, including IE6<br />
+  - Added round corners (using image trick)- working on every browser<br />
+  - Fixed previous issues on IE/old browsers<br />
+  - Added more details to plugin codes (also plugin JS code is explained in the unpacked version) </p>
+<p><strong>v1.2 - January 19th 2011</strong></p>
+<p>- Removed absolute positioning<br />
+- Updated the demo page with more details</p>
+<h3>To do:</h3>
+<p>- Implementing <span style="text-decoration:line-through;">options and</span> AJAX<br />
+  <span style="text-decoration:line-through;">- Fix hover on IE6</span><br />
+  <span style="text-decoration:line-through;">- Add 
+  rounded corners for IE versions</span><br />
+  <span style="text-decoration:line-through;">- Fixing links reconducting to top of the page (with hrefs set '#' to)</span>
+  <br />
+  <br />
+</p>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-20547746-3']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>
+
