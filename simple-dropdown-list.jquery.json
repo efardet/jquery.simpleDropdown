@@ -1,0 +1,33 @@
+{
+  "name": "simple-dropdown-list",
+  "title": "jQuery Simple Dropdown List",
+  "description": "A simple, lightweight and responsive jQuery dropdown list plugin",
+  "keywords": [
+    "jquery",
+    "dropdown",
+    "combobox",
+    "plugins"
+  ],
+  "version": "1.0.1",
+  "author": {
+    "name": "Etienne Fardet",
+    "url": "https://github.com/efardet"
+  },
+  "maintainers": [
+    {
+      "name": "Etienne Fardet",
+      "url": "https://github.com/efardet"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "homepage": "http://quai-aux-vivres.com/jquery/plugins/simpledropdown/",
+  "download": "http://www.quai-aux-vivres.com/jquery/plugins/simpledropdown/jquery.simpledropdown.v1.4.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}
